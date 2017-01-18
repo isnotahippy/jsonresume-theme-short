@@ -51,6 +51,7 @@ blockquote {
 }
 
 .heading header .contact .detail {
+	display: inline-block;
 	margin: 0 1em 0 0;
 }
 
@@ -113,23 +114,24 @@ section h2 {
 
 /* skills */
 #skills .item {
+	display: flex;
 	margin: 0.5em 0;
 	padding: 0 0 0.5em;
 	font-size: 90%;
 }
 
 #skills .item .name {
+	flex: 1;
 	font-weight: 600;
 	display: inline-block;
 	text-transform: uppercase;
 	margin: 0 1em 0 0;
-	width: 23%;
 	vertical-align: top;
 }
 
 #skills .item .keywords {
+	flex: 4;
 	display: inline-block;
-	width: 70%;
 	vertical-align: top;
 }
 
@@ -141,4 +143,14 @@ section h2 {
 	border-bottom: 0;
 }
 
+@media (min-width: 768px) {
 
+	/* gracefully degrades if flexbox is not supported */
+	#skills .item .name {
+		width: 23%;
+	}
+
+	#skills .item .keywords {
+		width: 70%;
+	}
+}
