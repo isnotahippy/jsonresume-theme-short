@@ -256,7 +256,7 @@
 			{{/if}}
 			{{#if date}}
 			<div class="date">
-				{{date}}
+				{{date date}}
 			</div>
 			{{/if}}
 			{{#if awarder}}
